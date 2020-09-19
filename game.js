@@ -17,9 +17,6 @@ function bindEventListeners (dots) {
   }
 }
 
-// Las funciones que se pasan como segundo argumento al metodo addEventListener, siempre reciben el evento
-// Ese evento, tiene algo que se llama target, que es el Elemento que disparo ese evento
-
 function makeGreen (evt) {
   evt.preventDefault()
   evt.target.classList.toggle('green')
@@ -55,8 +52,6 @@ function updateCounts () {
 }
 
 function displayTotals (totals) {
-  // se llama for..in statement
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
   for (var key in totals) {
     document.getElementById(key + '-total').innerHTML = totals[key]
   }
